@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@200;300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Sterling Cinematic Palette */
+    --background: 240 10% 2%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 4%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 4%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 95%; /* Sterling/Chromium Silver */
+    --primary-foreground: 240 10% 2%;
+    --secondary: 240 10% 6%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 10% 8%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 224 100% 66%; /* Electric Cobalt */
+    --accent-foreground: 240 10% 2%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 240 10% 12%;
+    --input: 240 10% 12%;
+    --ring: 224 100% 66%;
+    --radius: 0rem; 
+
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground selection:bg-accent/30;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading uppercase tracking-tighter;
+  }
+  
+  h1 { font-size: clamp(2.5rem, 12vw, 12rem); }
+  h2 { font-size: clamp(2rem, 8vw, 8rem); }
+  h3 { font-size: clamp(1.5rem, 5vw, 4rem); }
+}
+
+@layer components {
+  .grain-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+  }
+  .text-editorial-mask {
+    @apply bg-clip-text text-transparent font-heading;
+    background-image: linear-gradient(180deg, hsl(var(--foreground)) 0%, hsl(var(--foreground) / 0.4) 100%);
+  }
+  .text-chromium {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #FFFFFF 0%, #A1A1AA 100%);
+  }
+  .glass-pill {
+    @apply bg-white/[0.03] backdrop-blur-3xl border border-white/5;
+  }
+  .btn-sterling {
+    @apply relative px-8 md:px-12 py-4 md:py-6 font-heading font-medium tracking-[0.2em] uppercase border border-white/10 overflow-hidden transition-all duration-700 hover:border-accent/40;
+  }
+  .shimmer-text {
+    @apply relative overflow-hidden bg-gradient-to-r from-transparent via-white/20 to-transparent bg-[length:200%_100%] animate-shimmer bg-clip-text text-transparent;
+    -webkit-background-clip: text;
+  }
+  .section-container {
+    @apply container mx-auto px-6 md:px-12 py-24 md:py-48;
+  }
+}
+
+@layer utilities {
+  .font-heading { font-family: var(--font-heading); }
+  .font-body { font-family: var(--font-body); }
+  .mix-difference { mix-blend-mode: difference; }
+}
+
+/* Animations */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  animation: shimmer 3s infinite linear;
+}
+
+@keyframes liquid-slide {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes obsidian-pulse {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.3; }
+}
+
+::selection {
+  background: hsl(var(--accent) / 0.2);
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { @apply bg-white/10 hover:bg-accent/40 transition-colors; }
