@@ -6,27 +6,27 @@
 
 @layer base {
   :root {
-    /* Sterling Cinematic Palette */
-    --background: 240 10% 2%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 4%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 4%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 95%; /* Sterling/Chromium Silver */
-    --primary-foreground: 240 10% 2%;
-    --secondary: 240 10% 6%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 10% 8%;
-    --muted-foreground: 0 0% 65%;
-    --accent: 224 100% 66%; /* Electric Cobalt */
-    --accent-foreground: 240 10% 2%;
+    /* Monochrome Light — White Background, Black Text */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 5%;
+    --card: 0 0% 97%;
+    --card-foreground: 0 0% 5%;
+    --popover: 0 0% 97%;
+    --popover-foreground: 0 0% 5%;
+    --primary: 0 0% 8%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 0 0% 93%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 0 0% 8%; /* Near-black accent */
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
-    --border: 240 10% 12%;
-    --input: 240 10% 12%;
-    --ring: 224 100% 66%;
-    --radius: 0rem; 
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 0 0% 8%;
+    --radius: 0rem;
 
     --font-heading: 'Space Grotesk', sans-serif;
     --font-body: 'Outfit', sans-serif;
@@ -37,19 +37,34 @@
   * {
     @apply border-border;
   }
+
   body {
-    @apply bg-background text-foreground selection:bg-accent/30;
+    @apply bg-background text-foreground selection:bg-accent/10;
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading uppercase tracking-tighter;
   }
-  
-  h1 { font-size: clamp(2.5rem, 12vw, 12rem); }
-  h2 { font-size: clamp(2rem, 8vw, 8rem); }
-  h3 { font-size: clamp(1.5rem, 5vw, 4rem); }
+
+  h1 {
+    font-size: clamp(2.5rem, 12vw, 12rem);
+  }
+
+  h2 {
+    font-size: clamp(2rem, 8vw, 8rem);
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 5vw, 4rem);
+  }
 }
 
 @layer components {
@@ -58,39 +73,58 @@
     opacity: 0.03;
     pointer-events: none;
   }
+
   .text-editorial-mask {
     @apply bg-clip-text text-transparent font-heading;
-    background-image: linear-gradient(180deg, hsl(var(--foreground)) 0%, hsl(var(--foreground) / 0.4) 100%);
+    background-image: linear-gradient(180deg, hsl(var(--foreground)) 0%, hsl(var(--foreground) / 0.35) 100%);
   }
+
   .text-chromium {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, #FFFFFF 0%, #A1A1AA 100%);
+    background-image: linear-gradient(135deg, #1a1a1a 0%, #555555 100%);
   }
+
   .glass-pill {
-    @apply bg-white/[0.03] backdrop-blur-3xl border border-white/5;
+    @apply bg-black/[0.02] backdrop-blur-3xl border border-black/5;
   }
+
   .btn-sterling {
-    @apply relative px-8 md:px-12 py-4 md:py-6 font-heading font-medium tracking-[0.2em] uppercase border border-white/10 overflow-hidden transition-all duration-700 hover:border-accent/40;
+    @apply relative px-8 md:px-12 py-4 md:py-6 font-heading font-medium tracking-[0.2em] uppercase border border-black/10 overflow-hidden transition-all duration-700 hover:border-black/40;
   }
+
   .shimmer-text {
-    @apply relative overflow-hidden bg-gradient-to-r from-transparent via-white/20 to-transparent bg-[length:200%_100%] animate-shimmer bg-clip-text text-transparent;
+    @apply relative overflow-hidden bg-gradient-to-r from-transparent via-black/15 to-transparent bg-[length:200%_100%] animate-shimmer bg-clip-text text-transparent;
     -webkit-background-clip: text;
   }
+
   .section-container {
     @apply container mx-auto px-6 md:px-12 py-24 md:py-48;
   }
 }
 
 @layer utilities {
-  .font-heading { font-family: var(--font-heading); }
-  .font-body { font-family: var(--font-body); }
-  .mix-difference { mix-blend-mode: difference; }
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .mix-difference {
+    mix-blend-mode: difference;
+  }
 }
 
 /* Animations */
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 .animate-shimmer {
@@ -98,19 +132,39 @@
 }
 
 @keyframes liquid-slide {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 @keyframes obsidian-pulse {
-  0%, 100% { opacity: 0.1; }
-  50% { opacity: 0.3; }
+
+  0%,
+  100% {
+    opacity: 0.1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
 }
 
 ::selection {
-  background: hsl(var(--accent) / 0.2);
+  background: hsl(var(--accent) / 0.12);
 }
 
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { @apply bg-white/10 hover:bg-accent/40 transition-colors; }
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-black/10 hover:bg-black/30 transition-colors;
+}

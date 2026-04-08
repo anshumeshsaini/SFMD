@@ -16,13 +16,13 @@ const blogPosts = [
 
 const BlogSection = () => {
   return (
-    <section id="blog" className="relative bg-[#020406] overflow-hidden">
-      {/* Precision Axis Accents */}
-      <div className="absolute top-1/2 left-0 w-full h-[1px] bg-white/5 pointer-events-none" />
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/5 blur-[150px] pointer-events-none opacity-20" />
+    <section id="blog" className="relative bg-white overflow-hidden">
+      {/* Accents */}
+      <div className="absolute top-1/2 left-0 w-full h-[1px] bg-black/5 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-black/[0.01] blur-[150px] pointer-events-none" />
       
       <div className="section-container relative z-10">
-        <header className="mb-24 md:mb-48 flex flex-col md:flex-row justify-between items-start md:items-end gap-12 md:gap-24 border-l border-accent/20 md:pl-20 pl-8 group">
+        <header className="mb-24 md:mb-48 flex flex-col md:flex-row justify-between items-start md:items-end gap-12 md:gap-24 border-l border-black/15 md:pl-20 pl-8 group">
            <motion.div
              initial={{ opacity: 0, x: -50 }}
              whileInView={{ opacity: 1, x: 0 }}
@@ -30,22 +30,22 @@ const BlogSection = () => {
              transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
              className="max-w-5xl"
            >
-              <span className="text-accent/60 font-heading tracking-[1em] uppercase text-[9px] md:text-[10px] mb-10 inline-block font-bold">
+              <span className="text-black/40 font-heading tracking-[1em] uppercase text-[9px] md:text-[10px] mb-10 inline-block font-bold">
                 ARCHIVE / TECHNICAL JOURNAL
               </span>
-              <h2 className="text-white shimmer-text !text-editorial-mask">
+              <h2 className="text-black shimmer-text !text-editorial-mask">
                 LETTERS ON <br />
-                <span className="text-white/20 group-hover:text-white transition-colors duration-1000 uppercase">THE GAME</span>
+                <span className="text-black/20 group-hover:text-black transition-colors duration-1000 uppercase">THE GAME</span>
               </h2>
            </motion.div>
-           <p className="text-white/30 font-body font-light text-[10px] md:text-right max-w-xs leading-loose uppercase tracking-[0.3em] hidden lg:block group-hover:text-white/10 transition-colors duration-1000">
+           <p className="text-black/30 font-body font-light text-[10px] md:text-right max-w-xs leading-loose uppercase tracking-[0.3em] hidden lg:block group-hover:text-black/10 transition-colors duration-1000">
               ARCHIVED THOUGHTS AND TECHNICAL BLUEPRINTS FROM A CAREER DEPLOYED ACROSS THE 22-YARD SYSTEM.
            </p>
         </header>
 
-        {/* Sterling Magazine Grid */}
+        {/* Blog Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-32">
-           {/* Featured Narrative Stream */}
+           {/* Featured */}
            <div className="lg:col-span-8 flex flex-col gap-24 md:gap-40">
               {blogPosts.filter(p => p.size === "large" || p.size === "medium").map((post, i) => (
                 <motion.article
@@ -57,37 +57,37 @@ const BlogSection = () => {
                   className="group relative cursor-pointer"
                 >
                    <div className="grid grid-cols-1 md:grid-cols-10 gap-10 md:gap-20 items-center">
-                      <div className="md:col-span-6 relative overflow-hidden aspect-[16/10] bg-white/[0.01] border border-white/10 group-hover:border-accent/40 transition-colors duration-700 shadow-2xl">
+                      <div className="md:col-span-6 relative overflow-hidden aspect-[16/10] bg-neutral-100 border border-black/10 group-hover:border-black/30 transition-colors duration-700 shadow-xl">
                          <img 
                            src={post.img} 
                            alt={post.title} 
-                           className="w-full h-full object-cover contrast-110 brightness-[0.7] group-hover:brightness-95 group-hover:scale-105 transition-all duration-1000" 
+                           className="w-full h-full object-cover contrast-105 brightness-95 group-hover:brightness-100 group-hover:scale-105 transition-all duration-1000" 
                          />
                          <div className="absolute top-6 left-6 z-10">
-                            <span className="bg-white/5 backdrop-blur-3xl text-white px-5 py-2.5 font-heading text-[9px] font-black tracking-[0.5em] uppercase border border-white/10 group-hover:border-accent/40 transition-colors duration-500">
+                            <span className="bg-white/90 backdrop-blur-3xl text-black px-5 py-2.5 font-heading text-[9px] font-black tracking-[0.5em] uppercase border border-black/10 group-hover:border-black/30 transition-colors duration-500">
                                {post.tag}
                             </span>
                          </div>
-                         <div className="absolute inset-0 bg-gradient-to-t from-[#020406] to-transparent opacity-40" />
+                         <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent opacity-30" />
                       </div>
                       <div className="md:col-span-4 mt-6 md:mt-0">
-                         <div className="flex items-center gap-6 text-white/20 text-[9px] tracking-[0.5em] uppercase mb-10 font-bold group-hover:text-accent/60 transition-colors">
+                         <div className="flex items-center gap-6 text-black/20 text-[9px] tracking-[0.5em] uppercase mb-10 font-bold group-hover:text-black/40 transition-colors">
                             <span className="flex items-center gap-3"><Clock size={16} strokeWidth={1} /> {post.readTime}</span>
-                            <div className="h-px w-6 bg-white/10" />
+                            <div className="h-px w-6 bg-black/10" />
                             <span>{post.date}</span>
                          </div>
-                         <h3 className="text-4xl lg:text-6xl font-heading font-black text-white leading-[0.95] mb-10 uppercase tracking-tighter shimmer-text">
+                         <h3 className="text-4xl lg:text-6xl font-heading font-black text-black leading-[0.95] mb-10 uppercase tracking-tighter shimmer-text">
                             {post.title}
                           </h3>
-                         <p className="text-white/30 font-body font-light text-[11px] leading-loose uppercase tracking-[0.3em] mb-12 hidden md:block">
+                         <p className="text-black/30 font-body font-light text-[11px] leading-loose uppercase tracking-[0.3em] mb-12 hidden md:block">
                             {post.excerpt}
                           </p>
                          <div className="flex items-center gap-8 group/link">
-                            <span className="font-heading text-[10px] font-black tracking-[0.6em] uppercase text-white/40 group-hover/link:text-white transition-colors duration-500">
+                            <span className="font-heading text-[10px] font-black tracking-[0.6em] uppercase text-black/40 group-hover/link:text-black transition-colors duration-500">
                                DECONSTRUCT_LOG
                             </span>
-                            <div className="h-[1px] flex-1 bg-white/5 group-hover/link:bg-accent/40 transition-all duration-700" />
-                            <ArrowUpRight className="text-white/20 w-7 h-7 group-hover/link:text-accent group-hover/link:rotate-45 transition-all duration-500" />
+                            <div className="h-[1px] flex-1 bg-black/5 group-hover/link:bg-black/30 transition-all duration-700" />
+                            <ArrowUpRight className="text-black/20 w-7 h-7 group-hover/link:text-black group-hover/link:rotate-45 transition-all duration-500" />
                          </div>
                       </div>
                    </div>
@@ -95,13 +95,13 @@ const BlogSection = () => {
               ))}
            </div>
 
-           {/* Analytical Sidebar Stream */}
+           {/* Sidebar */}
            <div className="lg:col-span-4 flex flex-col gap-16 md:gap-24">
-              <div className="p-10 md:p-14 border border-white/10 bg-white/[0.01] backdrop-blur-3xl shadow-xl mb-12 group">
-                 <h4 className="font-heading text-[9px] md:text-[10px] font-bold tracking-[0.8em] uppercase text-white/20 mb-10 group-hover:text-accent transition-colors">ARCHIVE_FILTERS</h4>
+              <div className="p-10 md:p-14 border border-black/10 bg-white shadow-lg mb-12 group">
+                 <h4 className="font-heading text-[9px] md:text-[10px] font-bold tracking-[0.8em] uppercase text-black/20 mb-10 group-hover:text-black transition-colors">ARCHIVE_FILTERS</h4>
                  <div className="flex flex-wrap gap-4">
                     {["THEORY", "BIOLOGY", "LEGACY", "SYSTEMS"].map(t => (
-                      <span key={t} className="px-6 py-2.5 border border-white/5 bg-white/[0.02] text-[9px] font-bold uppercase tracking-[0.4em] text-white/30 hover:text-white hover:border-accent/40 hover:bg-accent/10 cursor-pointer transition-all duration-500">
+                      <span key={t} className="px-6 py-2.5 border border-black/5 bg-black/[0.01] text-[9px] font-bold uppercase tracking-[0.4em] text-black/30 hover:text-black hover:border-black/30 hover:bg-black/5 cursor-pointer transition-all duration-500">
                         {t}
                       </span>
                     ))}
@@ -115,27 +115,27 @@ const BlogSection = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.5 + (i * 0.2), duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-                  className="group cursor-pointer border-t border-white/5 pt-12 hover:border-accent/20 transition-colors duration-700"
+                  className="group cursor-pointer border-t border-black/5 pt-12 hover:border-black/20 transition-colors duration-700"
                 >
-                   <div className="relative overflow-hidden aspect-[16/9] mb-10 bg-white/[0.01] border border-white/10">
+                   <div className="relative overflow-hidden aspect-[16/9] mb-10 bg-neutral-100 border border-black/10">
                       <img 
                         src={post.img} 
                         alt={post.title} 
-                        className="w-full h-full object-cover contrast-110 brightness-[0.4] group-hover:brightness-90 group-hover:scale-105 transition-all duration-1000" 
+                        className="w-full h-full object-cover contrast-105 brightness-90 group-hover:brightness-100 group-hover:scale-105 transition-all duration-1000" 
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#020406] to-transparent opacity-90" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent opacity-70" />
                       <div className="absolute bottom-6 left-6">
-                         <div className="flex items-center gap-4 text-accent/60 text-[8px] md:text-[9px] font-bold tracking-[0.6em] uppercase">
+                         <div className="flex items-center gap-4 text-black/50 text-[8px] md:text-[9px] font-bold tracking-[0.6em] uppercase">
                             <span>{post.tag}</span>
                          </div>
                       </div>
                    </div>
-                   <h3 className="text-3xl font-heading font-black text-white mb-8 uppercase leading-[1.1] tracking-tighter shimmer-text">
+                   <h3 className="text-3xl font-heading font-black text-black mb-8 uppercase leading-[1.1] tracking-tighter shimmer-text">
                       {post.title}
                    </h3>
-                   <div className="flex justify-between items-center text-white/20 text-[9px] font-bold tracking-[0.6em] uppercase group-hover:text-accent/40 transition-colors">
+                   <div className="flex justify-between items-center text-black/20 text-[9px] font-bold tracking-[0.6em] uppercase group-hover:text-black/40 transition-colors">
                       <span>{post.date}</span>
-                      <ArrowUpRight size={20} strokeWidth={1} className="text-white/20 group-hover:text-accent group-hover:rotate-45 transition-all duration-500" />
+                      <ArrowUpRight size={20} strokeWidth={1} className="text-black/20 group-hover:text-black group-hover:rotate-45 transition-all duration-500" />
                    </div>
                 </motion.article>
               ))}
