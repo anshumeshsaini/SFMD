@@ -7,11 +7,50 @@ import galleryCoaching from "@/assets/gallery-coaching.jpg";
 import galleryStadium from "@/assets/gallery-stadium.jpg";
 
 const blogPosts = [
-  { id: 1, img: blogSwing, tag: "PHYSICS / CORE", title: "THE ART OF REVERSE SWING", excerpt: "Understanding the physics behind making the ball move in the air — the weapon that earned me 287 First-Class wickets.", date: "MAR 15, 2024", readTime: "8 MIN", size: "large" },
-  { id: 2, img: blogFitness, tag: "SYSTEMS / FITNESS", title: "ELITE LONGEVITY AUDIT", excerpt: "A fast bowler's body is everything. My technical approach to longevity in the most demanding role in elite sport.", date: "FEB 28, 2024", readTime: "6 MIN", size: "small" },
-  { id: 3, img: blogWickets, tag: "ARCHIVE / CAREER", title: "TOP 5 DISMISSALS", excerpt: "From 7/58 against Bengal to the national finals — reliving the deliveries that defined the monolithic legacy.", date: "JAN 20, 2024", readTime: "10 MIN", size: "small" },
-  { id: 4, img: galleryCoaching, tag: "LOGIC / MENTOR", title: "MENTOR PERSPECTIVE", excerpt: "Transitioning to Head Coach of Nashik Titans taught me more about the game's architecture than playing.", date: "JAN 5, 2024", readTime: "7 MIN", size: "medium" },
-  { id: 5, img: galleryStadium, tag: "REFLECTIONS", title: "DOMESTIC BACKBONE", excerpt: "The Ranji Trophy shaped me. It shapes every Indian cricketer. Why it deserves a technical audit.", date: "DEC 15, 2023", readTime: "5 MIN", size: "medium" },
+  { 
+    id: 1, 
+    img: blogSwing, 
+    tag: "LEGACY / ARCHIVE", 
+    title: "MAHARASHTRA'S HIGHEST Ranji WICKET-TAKER RETIRE", 
+    excerpt: "Samad Fallah officially announces his retirement from professional cricket. A 17-season odyssey concludes for Maharashtra's all-time leading seamer.", 
+    date: "JUN 24, 2024", 
+    readTime: "8 MIN", 
+    size: "large",
+    url: "https://timesofindia.indiatimes.com/sports/cricket/news/maharashtras-samad-fallah-announces-retirement-from-professional-cricket/articleshow/111191766.cms"
+  },
+  { 
+    id: 2, 
+    img: blogFitness, 
+    tag: "TECHNICAL / THEORY", 
+    title: "PUSHING THE SEAM BOWLING ENVELOPE", 
+    excerpt: "A geek among seamers. Pushing the boundaries of technical mastery to make up for height and pace with exceptional swing skill.", 
+    date: "OCT 03, 2019", 
+    readTime: "6 MIN", 
+    size: "small",
+    url: "https://timesofindia.indiatimes.com/sports/cricket/news/in-quest-for-mastery-stupid-samad-fallah-pushes-seam-bowling-envelope/articleshow/71475579.cms"
+  },
+  { 
+    id: 3, 
+    img: blogWickets, 
+    tag: "CANDID / DIALOGUE", 
+    title: "IPL, RANJI, AND THE CANDID CHAT", 
+    excerpt: "From leading the Maharashtra attack to IPL insights. A deep dive into 415 professional wickets across all formats in a candid session.", 
+    date: "AUG 15, 2021", 
+    readTime: "10 MIN", 
+    size: "small",
+    url: "https://cricketgraph.com/samad-fallah-ipl-maharashtra-uttarakhand-ranji-trophy-player-in-a-candid-chat-with-cricketgraph/"
+  },
+  { 
+    id: 4, 
+    img: galleryCoaching, 
+    tag: "PHYSICS / CORE", 
+    title: "THE FREE JAZZ OF SAMAD FALLAH’S BOWLING", 
+    excerpt: "An unpredictable run-up and a hustling style. Scripting a tale of resilience and passion that defined the art of domestic swing.", 
+    date: "NOV 27, 2017", 
+    readTime: "7 MIN", 
+    size: "medium",
+    url: "https://www.espn.in/cricket/story/_/id/21567880/the-free-jazz-samad-fallah-bowling"
+  }
 ];
 
 const BlogSection = () => {
@@ -55,6 +94,7 @@ const BlogSection = () => {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
                   className="group relative cursor-pointer"
+                  onClick={() => window.open(post.url, '_blank')}
                 >
                    <div className="grid grid-cols-1 md:grid-cols-10 gap-10 md:gap-20 items-center">
                       <div className="md:col-span-6 relative overflow-hidden aspect-[16/10] bg-neutral-100 border border-black/10 group-hover:border-black/30 transition-colors duration-700 shadow-xl">
@@ -116,6 +156,7 @@ const BlogSection = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.5 + (i * 0.2), duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
                   className="group cursor-pointer border-t border-black/5 pt-12 hover:border-black/20 transition-colors duration-700"
+                  onClick={() => window.open(post.url, '_blank')}
                 >
                    <div className="relative overflow-hidden aspect-[16/9] mb-10 bg-neutral-100 border border-black/10">
                       <img 

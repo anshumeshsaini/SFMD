@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import aboutPortrait from "@/assets/img6.jpg";
+import aboutPortrait from "@/assets/samad_cinematic.png";
 
 const technicalSpecs = [
   { label: "ID / 001", value: "SAMAD FALLAH" },
@@ -95,7 +95,7 @@ const AboutSection = () => {
                    </div>
                    <h2 className="text-black shimmer-text !text-editorial-mask">
                      THE SWING <br />
-                     <span className="text-black/20">REDACTED</span>
+                     <span className="text-black/20 uppercase">REDACTED</span>
                    </h2>
                 </header>
 

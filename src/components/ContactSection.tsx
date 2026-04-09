@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Instagram, Mail, ArrowUpRight, Send, Globe, Shield } from "lucide-react";
+import samadPortrait from "@/assets/samad_portrait_new.webp";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -37,10 +38,24 @@ const ContactSection = () => {
                  <span className="text-black/40 font-heading tracking-[1em] uppercase text-[9px] md:text-[10px] mb-10 block font-bold">
                     SYSTEM_INQUIRY / INTERFACE_START
                  </span>
-                 <h2 className="text-black shimmer-text !text-editorial-mask">
+                 <h2 className="text-black shimmer-text !text-editorial-mask mb-12">
                    OPEN FOR <br />
                    <span className="text-black/20 group-hover:text-black transition-colors duration-1000 uppercase">DIALOGUE</span>
                  </h2>
+                 
+                 <motion.div
+                   initial={{ opacity: 0, scale: 0.95 }}
+                   whileInView={{ opacity: 1, scale: 1 }}
+                   transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+                   className="relative aspect-square w-full max-w-[200px] overflow-hidden group/portrait shadow-2xl border border-black/5 bg-white mb-16"
+                 >
+                    <img 
+                      src={samadPortrait} 
+                      alt="Samad Fallah Portrait" 
+                      className="w-full h-full object-cover transition-transform duration-1000 group-hover/portrait:scale-110" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                 </motion.div>
                  
                  <div className="space-y-12 md:space-y-20 max-w-sm mt-16">
                     <p className="text-black/30 font-body font-light text-xs md:text-sm leading-loose uppercase tracking-[0.3em]">
@@ -120,18 +135,8 @@ const ContactSection = () => {
                     </div>
 
                     <div className="relative group/field">
-                       <textarea 
-                         required
-                         name="message"
-                         rows={5}
-                         value={formData.message}
-                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                         className="w-full bg-transparent border-b border-black/10 py-6 text-black focus:outline-none focus:border-black transition-all font-body resize-none peer uppercase text-xs tracking-[0.3em] leading-loose"
-                         placeholder=" "
-                       />
-                       <label className="absolute left-0 top-6 text-[9px] uppercase font-bold tracking-[0.6em] text-black/20 transition-all peer-placeholder-shown:text-xs peer-placeholder-shown:top-6 peer-focus:-top-6 peer-focus:text-black">
-                         TECHNICAL_BREIF / DATA_LOG
-                       </label>
+                       
+                       
                     </div>
 
                     <button 
@@ -147,35 +152,14 @@ const ContactSection = () => {
                           <Send size={18} className="text-black/40 group-hover/btn:text-white transition-colors duration-500" />
                        </div>
                     </button>
-                    <div className="flex justify-between items-center text-[7px] md:text-[8px] text-black/10 uppercase tracking-[1em] group-hover:text-black/20 transition-colors duration-1000">
-                       <span className="flex items-center gap-3"><Shield size={10} /> ENCRYPT_PROTECT</span>
-                       <span className="flex items-center gap-3">ALPHA_v2 <Globe size={10} /></span>
-                    </div>
+                    
                  </form>
               </motion.div>
            </div>
         </div>
 
         {/* Footer */}
-        <footer className="mt-32 md:mt-64 pt-20 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-16 text-[9px] md:text-[10px] font-bold uppercase tracking-[0.8em] text-black/20 group">
-           <div className="flex flex-col md:flex-row items-center gap-10 md:gap-24 order-2 md:order-1">
-              <span className="text-black/40 border-b border-black/15 pb-1 cursor-pointer transition-colors hover:text-black hover:border-black">© 2024 STERLING_CINEMATIC.SF</span>
-              <span className="hover:text-black cursor-pointer transition-colors duration-500">CAREER_DATASET</span>
-              <span className="hover:text-black cursor-pointer transition-colors duration-500">SYSTEM_MANIFESTO</span>
-           </div>
-           
-           <div className="flex items-center gap-16 order-1 md:order-2">
-              <div className="flex flex-col items-end gap-2">
-                 <span className="text-black group-hover:text-black/50 transition-colors duration-500">SYSTEM_OPERATIONAL</span>
-                 <span className="text-[8px] tracking-[1.2em]">GLOBAL_CORE</span>
-              </div>
-              <div className="h-14 w-[1px] bg-black/5 group-hover:bg-black/20 transition-colors duration-1000" />
-              <div className="flex flex-col items-end gap-2 tabular-nums">
-                 <span className="text-black group-hover:text-black/50 transition-colors duration-500">REF_ID: 287-RK</span>
-                 <span className="text-[8px] tracking-[1.2em]">VERIFIED_ARCHIVE</span>
-              </div>
-           </div>
-        </footer>
+       
       </div>
 
       <style>{`

@@ -7,6 +7,8 @@ import img2014 from "@/assets/2014.png";
 import img2024 from "@/assets/2024.png";
 import bioCardBg from "@/assets/bio-card-bg.jpg";
 import statsBadges from "@/assets/stats-badges.png";
+import samadRetirement from "@/assets/samad_retirement.jpg";
+import samadTrophy from "@/assets/samad_trophy.jpg";
 
 const timelineData = [
   { 
@@ -428,11 +430,11 @@ const BiographySection = () => {
             transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
           >
             <span className="text-black/40 font-heading tracking-[0.8em] uppercase text-[9px] md:text-[10px] mb-10 inline-block font-bold">
-              TIMELINE / THE ARCHIVAL ODYSSEY
+              THE HERITAGE COLLECTION / ARCHIVAL ODYSSEY
             </span>
             <h2 className="text-black shimmer-text !text-editorial-mask">
               A LEGACY OF <br />
-              <span className="text-black/20 group-hover:text-black transition-colors duration-1000">SWING & FORCE</span>
+              <span className="text-black/20 group-hover:text-black transition-colors duration-1000 uppercase">SWING & FORCE</span>
             </h2>
             <motion.div 
               initial={{ width: 0 }}
@@ -514,12 +516,43 @@ const BiographySection = () => {
             />
           ))}
 
+          {/* Featured Heritage Highlights */}
+          <div className="mt-48 grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10 px-6">
+            {[
+              { img: samadRetirement, title: "FINAL GLANCE", label: "RETIREMENT_ENTRY" },
+              { img: samadTrophy, title: "THE APEX", label: "MOMENT_OF_IMPACT" }
+            ].map((item, i) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.2, duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+                className="relative aspect-[4/5] md:aspect-square overflow-hidden group shadow-2xl border border-black/5 bg-white p-4"
+              >
+                <div className="w-full h-full overflow-hidden relative">
+                  <img 
+                    src={item.img} 
+                    alt={item.title} 
+                    className="w-full h-full object-cover grayscale-0 group-hover:scale-110 transition-transform duration-1000" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  
+                  <div className="absolute bottom-8 left-8 right-8 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700">
+                    <span className="text-[10px] font-bold tracking-[0.6em] text-white/40 mb-2 block uppercase">{item.label}</span>
+                    <h4 className="text-2xl font-heading font-black text-white uppercase tracking-tighter">{item.title}</h4>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
           {/* End marker */}
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="hidden md:flex justify-center mt-8"
+            className="hidden md:flex justify-center mt-24"
           >
             <div className="w-6 h-6 border-2 border-black/30 rotate-45 bg-black/5 shadow-[0_0_20px_rgba(0,0,0,0.1)]" />
           </motion.div>

@@ -43,7 +43,7 @@ const HeroSection = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
   return (
-    <section ref={containerRef} id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-white py-24 md:py-0">
+    <section ref={containerRef} id="hero" className="relative min-h-screen flex items-start md:items-center overflow-hidden bg-white py-32 md:py-0">
       {/* Dynamic Background */}
       <motion.div style={{ y, opacity }} className="absolute inset-x-0 h-[120%] z-0">
         <img src={stadiumBg} alt="Stadium Background" className="w-full h-full object-cover brightness-[0.95] contrast-[1.1]" />
@@ -64,9 +64,9 @@ const HeroSection = () => {
         <img src={lionMascot} alt="Lion Mascot" className="w-full h-full object-contain contrast-125" />
       </motion.div>
 
-      <div className="container relative z-20 mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-24 items-center">
+      <div className="container relative z-20 mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-24 items-start md:items-center">
         {/* Monolithic Narrative */}
-        <div className="lg:col-span-9 pt-12 lg:pt-0">
+        <div className="lg:col-span-9 pt-8 md:pt-0">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
