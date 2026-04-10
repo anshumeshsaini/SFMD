@@ -16,11 +16,11 @@ const StatBox = ({ label, value, detail, delay, decimals = 0 }: { label: string;
     </div>
     <div className="flex items-center gap-4 mb-6">
       <div className="h-[1px] w-8 bg-black/20 group-hover:w-16 group-hover:bg-black transition-all duration-700" />
-      <h3 className="font-heading text-[10px] font-bold uppercase tracking-[0.5em] text-black/40 group-hover:text-black transition-colors">
+      <h3 className="font-heading text-[10px] font-bold uppercase tracking-[0.5em] text-black/70 group-hover:text-black transition-colors">
         {label}
       </h3>
     </div>
-    <p className="text-[10px] md:text-[11px] text-black/30 font-body font-light leading-loose uppercase tracking-[0.3em] group-hover:text-black/40 transition-colors">
+    <p className="text-[10px] md:text-[11px] text-black/60 font-body font-light leading-loose uppercase tracking-[0.3em] group-hover:text-black/40 transition-colors">
       {detail}
     </p>
   </motion.div>
@@ -43,12 +43,12 @@ const StatsSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
           >
-            <span className="text-black/40 font-heading tracking-[1em] uppercase text-[9px] md:text-[10px] mb-10 inline-block font-bold">
+            <span className="text-black/70 font-heading tracking-[1em] uppercase text-[9px] md:text-[10px] mb-10 inline-block font-bold">
               METRICS / THE STERLING SCALE
             </span>
             <h2 className="text-black shimmer-text !text-editorial-mask">
               STATISTICAL <br />
-              <span className="text-black/20 group-hover:text-black transition-colors duration-1000 uppercase">LANDSCAPE</span>
+              <span className="text-black/50 group-hover:text-black transition-colors duration-1000 uppercase">LANDSCAPE</span>
             </h2>
           </motion.div>
         </header>
@@ -99,17 +99,17 @@ const StatsSection = () => {
                <div className="p-10 md:p-14 border border-black/10 bg-white/95 backdrop-blur-md shadow-2xl">
                  <div className="flex items-center gap-6 mb-8 group-hover:pl-4 transition-all duration-700">
                    <div className="w-2 h-2 bg-black rotate-45" />
-                   <span className="text-[10px] font-bold tracking-[0.6em] uppercase text-black/40">DOMINANCE IN MOTION / THE STATISTICAL LANDSCAPE</span>
+                   <span className="text-[10px] font-bold tracking-[0.6em] uppercase text-black/70">DOMINANCE IN MOTION / THE STATISTICAL LANDSCAPE</span>
                  </div>
                  
                  <h3 className="text-3xl md:text-5xl font-heading font-black text-black leading-tight uppercase tracking-tighter mb-8 !text-editorial-mask">
                    DOMINANCE <br />
-                   <span className="text-black/20 group-hover:text-black transition-colors duration-1000">IN MOTION</span>
+                   <span className="text-black/50 group-hover:text-black transition-colors duration-1000">IN MOTION</span>
                  </h3>
                  
-                 <div className="h-[1px] w-12 bg-black/20 mb-10 group-hover:w-24 group-hover:bg-black transition-all duration-700" />
+                 <div className="h-[1px] w-12 bg-black/50 mb-10 group-hover:w-24 group-hover:bg-black transition-all duration-700" />
                  
-                 <p className="text-[10px] md:text-[11px] text-black/40 font-body font-light uppercase tracking-[0.3em] leading-loose group-hover:text-black/60 transition-colors duration-700">
+                 <p className="text-[10px] md:text-[11px] text-black/70 font-body font-light uppercase tracking-[0.3em] leading-loose group-hover:text-black/60 transition-colors duration-700">
                    A SNAPSHOT FROM THE 2024 SEASON. CAPTURING THE PRECISE MOMENT OF RELEASE THAT HAS DISMANTLED 287 RANJI DISMISSALS. 
                    <br /><br />
                    <span className="text-black font-bold">CORE_ARCHIVE: 2024_ACTIVE_SYSTEM.</span>

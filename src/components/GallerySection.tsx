@@ -41,12 +41,12 @@ const GallerySection = () => {
              transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
              className="max-w-4xl"
            >
-              <span className="text-black/40 font-heading tracking-[1em] uppercase text-[9px] md:text-[10px] mb-10 block font-bold">
+              <span className="text-black/70 font-heading tracking-[1em] uppercase text-[9px] md:text-[10px] mb-10 block font-bold">
                 RECORDS / VISUAL DATA_EXPANSION
               </span>
               <h2 className="text-black shimmer-text !text-editorial-mask">
                 VISUAL <br />
-                <span className="text-black/20 group-hover:text-black transition-colors duration-1000 uppercase">NARRATIVE</span>
+                <span className="text-black/50 group-hover:text-black transition-colors duration-1000 uppercase">NARRATIVE</span>
               </h2>
            </motion.div>
 
@@ -57,14 +57,14 @@ const GallerySection = () => {
                      key={tab}
                      onClick={() => setActiveTab(tab)}
                      className={`font-heading text-[10px] tracking-[0.5em] font-bold uppercase transition-all duration-500 pb-3 border-b-2 whitespace-nowrap ${
-                       activeTab === tab ? "text-black border-black" : "text-black/20 border-transparent hover:text-black/40"
+                       activeTab === tab ? "text-black border-black" : "text-black/50 border-transparent hover:text-black/70"
                      }`}
                    >
                      {tab}
                    </button>
                  ))}
               </div>
-              <p className="text-black/30 font-body font-light text-[10px] lg:text-right max-w-xs leading-loose uppercase tracking-[0.3em] hidden md:block group-hover:text-black/10 transition-colors duration-1000">
+              <p className="text-black/60 font-body font-light text-[10px] lg:text-right max-w-xs leading-loose uppercase tracking-[0.3em] hidden md:block group-hover:text-black/10 transition-colors duration-1000">
                  CAPTURING THE INTENSITY, THE FLUIDITY, AND THE SYSTEMIC PRECISION OF AN ARCHIVAL LEGEND.
               </p>
            </div>
@@ -164,19 +164,19 @@ const GallerySection = () => {
                       <span className="font-heading text-[10px] md:text-[11px] tracking-[0.8em] text-black font-black uppercase">{selectedItem.category}</span>
                    </div>
                    <h2 className="text-4xl md:text-7xl font-heading font-black text-black uppercase leading-[0.9] tracking-tighter mb-10 shimmer-text">{selectedItem.caption}</h2>
-                   <p className="text-black/40 font-body font-light text-sm md:text-base leading-loose uppercase tracking-[0.3em] max-w-md">
+                   <p className="text-black/70 font-body font-light text-sm md:text-base leading-loose uppercase tracking-[0.3em] max-w-md">
                      {selectedItem.detail}
                    </p>
                 </header>
 
                 <div className="space-y-12 mt-16 md:mt-0">
-                   <div className="flex flex-col gap-6 font-body text-[9px] md:text-[10px] uppercase tracking-[0.6em] text-black/20 border-t border-black/5 pt-12">
+                   <div className="flex flex-col gap-6 font-body text-[9px] md:text-[10px] uppercase tracking-[0.6em] text-black/50 border-t border-black/5 pt-12">
                       <div className="flex items-center gap-4">
-                         <span className="text-black/40 font-bold">STATUS:</span>
+                         <span className="text-black/70 font-bold">STATUS:</span>
                          <span>SYSTEMS_OPERATIONAL / ARCHIVE_READY</span>
                       </div>
                       <div className="flex items-center gap-4">
-                         <span className="text-black/40 font-bold">RECORD_ID:</span>
+                         <span className="text-black/70 font-bold">RECORD_ID:</span>
                          <span>SF_CORE_0{selectedItem.id}_STERLING</span>
                       </div>
                    </div>
@@ -190,7 +190,7 @@ const GallerySection = () => {
                             <X className="w-6 h-6 text-black group-hover:rotate-90 transition-transform duration-700 relative z-10" />
                             <div className="absolute inset-0 bg-black/10 scale-0 group-hover:scale-150 rounded-full blur-xl transition-transform duration-700" />
                          </div>
-                         <span className="font-heading text-[10px] font-black tracking-[0.8em] text-black/40 group-hover:text-black transition-colors uppercase">EXIT_MODULE</span>
+                         <span className="font-heading text-[10px] font-black tracking-[0.8em] text-black/70 group-hover:text-black transition-colors uppercase">EXIT_MODULE</span>
                       </div>
                       <div className="h-px w-12 bg-black/10 group-hover:w-24 group-hover:bg-black transition-all duration-700" />
                    </button>

@@ -24,7 +24,7 @@ const AboutSection = () => {
       {/* Cinematic Typographic Layer */}
       <motion.div 
         style={{ y: textY }}
-        className="absolute top-20 md:top-40 left-0 right-0 pointer-events-none select-none z-0 px-6 opacity-[0.03]"
+        className="absolute top-20 md:top-40 left-0 right-0 pointer-events-none select-none z-0 px-6 opacity-[0.06]"
       >
         <span className="text-[20vw] font-heading font-black text-black leading-none uppercase tracking-tighter block">
           DOSSIER_CORE
@@ -65,8 +65,8 @@ const AboutSection = () => {
                 >
                    <span className="font-heading text-black text-5xl md:text-7xl font-black block leading-none shimmer-text">287</span>
                    <div className="flex items-center gap-4 mt-3">
-                      <div className="h-px w-6 bg-black/30" />
-                      <p className="text-[9px] md:text-[10px] text-black/40 uppercase tracking-[0.5em] font-bold whitespace-nowrap">
+                      <div className="h-px w-6 bg-black/60" />
+                      <p className="text-[9px] md:text-[10px] text-black/70 uppercase tracking-[0.5em] font-bold whitespace-nowrap">
                         RECORDED DISMISSALS
                       </p>
                    </div>
@@ -87,27 +87,27 @@ const AboutSection = () => {
                       <motion.div 
                         initial={{ x: -50 }}
                         whileInView={{ x: 0 }}
-                        className="h-px w-16 bg-black/30" 
+                        className="h-px w-16 bg-black/60" 
                       />
-                      <span className="text-black/50 font-heading tracking-[1em] uppercase text-[9px] md:text-[10px] font-bold">
+                      <span className="text-black/80 font-heading tracking-[1em] uppercase text-[9px] md:text-[10px] font-bold">
                          SUBJECT / FALLAH.S
                       </span>
                    </div>
                    <h2 className="text-black shimmer-text !text-editorial-mask">
                      THE SWING <br />
-                     <span className="text-black/20 uppercase">REDACTED</span>
+                     <span className="text-black/50 uppercase">REDACTED</span>
                    </h2>
                 </header>
 
-                <div className="space-y-12 max-w-2xl border-l border-black/10 md:pl-16 pl-8 group">
+                 <div className="space-y-12 max-w-2xl border-l border-black/30 md:pl-16 pl-8 group">
                    <p className="text-2xl md:text-4xl font-heading font-black text-black leading-[1.1] uppercase tracking-tighter group-hover:text-black/60 transition-colors duration-700">
                      "I AM NOT A PRODUCT OF AN ACADEMY. <br />
                      I AM A PRODUCT OF RAW PHYSICS."
                    </p>
-                   <p className="text-black/40 font-body font-light text-xs md:text-sm leading-loose uppercase tracking-[0.25em]">
+                   <p className="text-black/70 font-body font-light text-xs md:text-sm leading-loose uppercase tracking-[0.25em]">
                      Samad Fallah's emergence was a disruption to the established order. Forged in the tennis-ball circuits of Nashik, his mechanics bypassed tradition, delivering a lethal, untamed swing that left the domestic system re-evaluating its metrics.
                    </p>
-                   <p className="text-black/40 font-body font-light text-xs md:text-sm leading-loose uppercase tracking-[0.25em]">
+                   <p className="text-black/70 font-body font-light text-xs md:text-sm leading-loose uppercase tracking-[0.25em]">
                      For 17 seasons, he remained a technical anomaly—a left-arm powerhouse whose trajectory challenged every defensive system in the Ranji Trophy.
                    </p>
                 </div>
@@ -123,7 +123,7 @@ const AboutSection = () => {
                         transition={{ delay: i * 0.1 }}
                         className="bg-white p-8 md:p-10 group hover:bg-black/[0.02] transition-colors"
                      >
-                        <span className="block text-[8px] md:text-[9px] text-black/20 uppercase tracking-[0.5em] mb-4 group-hover:text-black/50 transition-colors font-bold">
+                        <span className="block text-[8px] md:text-[9px] text-black/50 uppercase tracking-[0.5em] mb-4 group-hover:text-black/50 transition-colors font-bold">
                            {spec.label}
                         </span>
                         <span className="font-heading text-lg md:text-xl font-bold text-black tracking-widest">

@@ -69,15 +69,15 @@ const BlogSection = () => {
              transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
              className="max-w-5xl"
            >
-              <span className="text-black/40 font-heading tracking-[1em] uppercase text-[9px] md:text-[10px] mb-10 inline-block font-bold">
+              <span className="text-black/70 font-heading tracking-[1em] uppercase text-[9px] md:text-[10px] mb-10 inline-block font-bold">
                 ARCHIVE / TECHNICAL JOURNAL
               </span>
               <h2 className="text-black shimmer-text !text-editorial-mask">
                 LETTERS ON <br />
-                <span className="text-black/20 group-hover:text-black transition-colors duration-1000 uppercase">THE GAME</span>
+                <span className="text-black/50 group-hover:text-black transition-colors duration-1000 uppercase">THE GAME</span>
               </h2>
            </motion.div>
-           <p className="text-black/30 font-body font-light text-[10px] md:text-right max-w-xs leading-loose uppercase tracking-[0.3em] hidden lg:block group-hover:text-black/10 transition-colors duration-1000">
+           <p className="text-black/60 font-body font-light text-[10px] md:text-right max-w-xs leading-loose uppercase tracking-[0.3em] hidden lg:block group-hover:text-black/10 transition-colors duration-1000">
               ARCHIVED THOUGHTS AND TECHNICAL BLUEPRINTS FROM A CAREER DEPLOYED ACROSS THE 22-YARD SYSTEM.
            </p>
         </header>
@@ -111,7 +111,7 @@ const BlogSection = () => {
                          <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent opacity-30" />
                       </div>
                       <div className="md:col-span-4 mt-6 md:mt-0">
-                         <div className="flex items-center gap-6 text-black/20 text-[9px] tracking-[0.5em] uppercase mb-10 font-bold group-hover:text-black/40 transition-colors">
+                         <div className="flex items-center gap-6 text-black/50 text-[9px] tracking-[0.5em] uppercase mb-10 font-bold group-hover:text-black/70 transition-colors">
                             <span className="flex items-center gap-3"><Clock size={16} strokeWidth={1} /> {post.readTime}</span>
                             <div className="h-px w-6 bg-black/10" />
                             <span>{post.date}</span>
@@ -119,15 +119,15 @@ const BlogSection = () => {
                          <h3 className="text-4xl lg:text-6xl font-heading font-black text-black leading-[0.95] mb-10 uppercase tracking-tighter shimmer-text">
                             {post.title}
                           </h3>
-                         <p className="text-black/30 font-body font-light text-[11px] leading-loose uppercase tracking-[0.3em] mb-12 hidden md:block">
+                         <p className="text-black/60 font-body font-light text-[11px] leading-loose uppercase tracking-[0.3em] mb-12 hidden md:block">
                             {post.excerpt}
                           </p>
                          <div className="flex items-center gap-8 group/link">
-                            <span className="font-heading text-[10px] font-black tracking-[0.6em] uppercase text-black/40 group-hover/link:text-black transition-colors duration-500">
+                            <span className="font-heading text-[10px] font-black tracking-[0.6em] uppercase text-black/70 group-hover/link:text-black transition-colors duration-500">
                                DECONSTRUCT_LOG
                             </span>
                             <div className="h-[1px] flex-1 bg-black/5 group-hover/link:bg-black/30 transition-all duration-700" />
-                            <ArrowUpRight className="text-black/20 w-7 h-7 group-hover/link:text-black group-hover/link:rotate-45 transition-all duration-500" />
+                            <ArrowUpRight className="text-black/50 w-7 h-7 group-hover/link:text-black group-hover/link:rotate-45 transition-all duration-500" />
                          </div>
                       </div>
                    </div>
@@ -138,10 +138,10 @@ const BlogSection = () => {
            {/* Sidebar */}
            <div className="lg:col-span-4 flex flex-col gap-16 md:gap-24">
               <div className="p-10 md:p-14 border border-black/10 bg-white shadow-lg mb-12 group">
-                 <h4 className="font-heading text-[9px] md:text-[10px] font-bold tracking-[0.8em] uppercase text-black/20 mb-10 group-hover:text-black transition-colors">ARCHIVE_FILTERS</h4>
+                 <h4 className="font-heading text-[9px] md:text-[10px] font-bold tracking-[0.8em] uppercase text-black/50 mb-10 group-hover:text-black transition-colors">ARCHIVE_FILTERS</h4>
                  <div className="flex flex-wrap gap-4">
                     {["THEORY", "BIOLOGY", "LEGACY", "SYSTEMS"].map(t => (
-                      <span key={t} className="px-6 py-2.5 border border-black/5 bg-black/[0.01] text-[9px] font-bold uppercase tracking-[0.4em] text-black/30 hover:text-black hover:border-black/30 hover:bg-black/5 cursor-pointer transition-all duration-500">
+                      <span key={t} className="px-6 py-2.5 border border-black/5 bg-black/[0.01] text-[9px] font-bold uppercase tracking-[0.4em] text-black/60 hover:text-black hover:border-black/30 hover:bg-black/5 cursor-pointer transition-all duration-500">
                         {t}
                       </span>
                     ))}
@@ -174,9 +174,9 @@ const BlogSection = () => {
                    <h3 className="text-3xl font-heading font-black text-black mb-8 uppercase leading-[1.1] tracking-tighter shimmer-text">
                       {post.title}
                    </h3>
-                   <div className="flex justify-between items-center text-black/20 text-[9px] font-bold tracking-[0.6em] uppercase group-hover:text-black/40 transition-colors">
+                   <div className="flex justify-between items-center text-black/50 text-[9px] font-bold tracking-[0.6em] uppercase group-hover:text-black/70 transition-colors">
                       <span>{post.date}</span>
-                      <ArrowUpRight size={20} strokeWidth={1} className="text-black/20 group-hover:text-black group-hover:rotate-45 transition-all duration-500" />
+                      <ArrowUpRight size={20} strokeWidth={1} className="text-black/50 group-hover:text-black group-hover:rotate-45 transition-all duration-500" />
                    </div>
                 </motion.article>
               ))}

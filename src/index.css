@@ -18,7 +18,7 @@
     --secondary: 0 0% 95%;
     --secondary-foreground: 0 0% 10%;
     --muted: 0 0% 93%;
-    --muted-foreground: 0 0% 40%;
+    --muted-foreground: 0 0% 30%;
     --accent: 0 0% 8%; /* Near-black accent */
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
@@ -76,7 +76,7 @@
 
   .text-editorial-mask {
     @apply bg-clip-text text-transparent font-heading;
-    background-image: linear-gradient(180deg, hsl(var(--foreground)) 0%, hsl(var(--foreground) / 0.35) 100%);
+    background-image: linear-gradient(180deg, hsl(var(--foreground)) 0%, hsl(var(--foreground) / 0.65) 100%);
   }
 
   .text-chromium {

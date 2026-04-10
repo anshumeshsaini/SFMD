@@ -95,8 +95,8 @@ const TimelineMarker = ({ isActive, index }: { isActive: boolean; index: number 
       transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       className={`w-4 h-4 border-2 rotate-45 transition-all duration-700 ${
         isActive 
-          ? "border-black bg-black/20 shadow-[0_0_15px_rgba(0,0,0,0.2)]" 
-          : "border-black/20 bg-black/5 hover:border-black/40"
+          ? "border-black bg-black/50 shadow-[0_0_15px_rgba(0,0,0,0.2)]" 
+          : "border-black/50 bg-black/10 hover:border-black/70"
       }`}
     />
     {isActive && (
@@ -104,12 +104,12 @@ const TimelineMarker = ({ isActive, index }: { isActive: boolean; index: number 
         <motion.div
           animate={{ scale: [1, 2.5], opacity: [0.3, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeOut" }}
-          className="absolute w-4 h-4 border border-black/20 rotate-45"
+          className="absolute w-4 h-4 border border-black/50 rotate-45"
         />
         <motion.div
           animate={{ scale: [1, 3], opacity: [0.15, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeOut", delay: 0.5 }}
-          className="absolute w-4 h-4 border border-black/10 rotate-45"
+          className="absolute w-4 h-4 border border-black/40 rotate-45"
         />
       </>
     )}
@@ -225,9 +225,9 @@ const TimelineItem = ({ item, index, activeIndex, onHover }: {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
-                className="h-[1px] w-10 bg-black/20 group-hover:w-16 group-hover:bg-black transition-all duration-700" 
+                className="h-[1px] w-10 bg-black/50 group-hover:w-16 group-hover:bg-black transition-all duration-700" 
               />
-              <span className="font-heading text-[10px] font-bold tracking-[0.6em] uppercase text-black/40 group-hover:text-black transition-colors duration-500">
+              <span className="font-heading text-[10px] font-bold tracking-[0.6em] uppercase text-black/70 group-hover:text-black transition-colors duration-500">
                 {item.year}
               </span>
             </div>
@@ -269,7 +269,7 @@ const TimelineItem = ({ item, index, activeIndex, onHover }: {
           </h3>
 
           {/* Description */}
-          <p className="text-black/35 font-body font-light text-xs md:text-sm leading-loose uppercase tracking-[0.3em] relative z-10 group-hover:text-black/50 transition-colors duration-700">
+          <p className="text-black/65 font-body font-light text-xs md:text-sm leading-loose uppercase tracking-[0.3em] relative z-10 group-hover:text-black/50 transition-colors duration-700">
             {item.desc}
           </p>
 
@@ -286,12 +286,12 @@ const TimelineItem = ({ item, index, activeIndex, onHover }: {
                 <div className="pt-8 mt-8 border-t border-black/5">
                   <div className="flex items-center gap-4 mb-6">
                     <span className="text-black/60 text-lg">{item.icon}</span>
-                    <span className="text-[9px] font-heading font-bold tracking-[0.5em] uppercase text-black/40">
+                    <span className="text-[9px] font-heading font-bold tracking-[0.5em] uppercase text-black/70">
                       EXPANDED ARCHIVE
                     </span>
                   </div>
                   
-                  <p className="text-black/40 font-body font-light text-xs md:text-sm leading-loose uppercase tracking-[0.2em]">
+                  <p className="text-black/70 font-body font-light text-xs md:text-sm leading-loose uppercase tracking-[0.2em]">
                     {item.detail}
                   </p>
                 </div>
@@ -429,21 +429,21 @@ const BiographySection = () => {
             viewport={{ once: true }}
             transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
           >
-            <span className="text-black/40 font-heading tracking-[0.8em] uppercase text-[9px] md:text-[10px] mb-10 inline-block font-bold">
+            <span className="text-black/70 font-heading tracking-[0.8em] uppercase text-[9px] md:text-[10px] mb-10 inline-block font-bold">
               THE HERITAGE COLLECTION / ARCHIVAL ODYSSEY
             </span>
             <h2 className="text-black shimmer-text !text-editorial-mask">
               A LEGACY OF <br />
-              <span className="text-black/20 group-hover:text-black transition-colors duration-1000 uppercase">SWING & FORCE</span>
+              <span className="text-black/50 group-hover:text-black transition-colors duration-1000 uppercase">SWING & FORCE</span>
             </h2>
             <motion.div 
               initial={{ width: 0 }}
               whileInView={{ width: "6rem" }}
               viewport={{ once: true }}
               transition={{ delay: 0.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-12 md:mt-16 h-[2px] bg-black/20 group-hover:!w-48 group-hover:bg-black transition-all duration-1000" 
+              className="mt-12 md:mt-16 h-[2px] bg-black/60 group-hover:!w-48 group-hover:bg-black transition-all duration-1000" 
             />
-            <p className="mt-12 text-black/35 font-body font-light text-xs md:text-sm leading-loose uppercase tracking-[0.4em] max-w-2xl">
+            <p className="mt-12 text-black/65 font-body font-light text-xs md:text-sm leading-loose uppercase tracking-[0.4em] max-w-2xl">
               From the tennis-ball circuits of Nashik to the hallowed turf of the Ranji Trophy. A 17-year odyssey documented in First-Class blood and Sterling precision.
             </p>
 
@@ -595,7 +595,7 @@ const BiographySection = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.6, duration: 1 }}
-                className="text-black/20 block mb-4"
+                className="text-black/50 block mb-4"
               >
                 I SAY IT'S EARNED IN THE
               </motion.span>
@@ -605,7 +605,7 @@ const BiographySection = () => {
                 viewport={{ once: true }}
                 transition={{ delay: 1, duration: 1.2 }}
                 className="text-transparent stroke-text block" 
-                style={{ WebkitTextStroke: "1px rgba(0,0,0,0.3)" }}
+                style={{ WebkitTextStroke: "1px rgba(0,0,0,0.6)" }}
               >
                 NASHIK SUN.
               </motion.span>

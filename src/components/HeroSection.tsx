@@ -77,9 +77,9 @@ const HeroSection = () => {
                  initial={{ x: -100 }}
                  animate={{ x: 0 }}
                  transition={{ delay: 0.5, duration: 1 }}
-                 className="h-[1px] w-12 bg-black/30" 
+                 className="h-[1px] w-12 bg-black/60" 
                />
-               <span className="font-heading text-black tracking-[0.6em] uppercase text-[9px] md:text-[10px] font-bold opacity-50">
+               <span className="font-heading text-black tracking-[0.6em] uppercase text-[9px] md:text-[10px] font-bold opacity-80">
                  STERLING PRECISION / DOMESTIC RECORD
                </span>
             </div>
@@ -89,7 +89,7 @@ const HeroSection = () => {
                 SAMAD
               </span>
               <span className="font-heading font-black leading-[0.8] text-transparent stroke-text tracking-tighter -mt-2 md:-mt-8"
-                    style={{ WebkitTextStroke: "1px rgba(0,0,0,0.2)" }}>
+                    style={{ WebkitTextStroke: "1px rgba(0,0,0,0.5)" }}>
                 FALLAH
               </span>
             </h1>
@@ -108,8 +108,8 @@ const HeroSection = () => {
               </a>
             </MagneticButton>
 
-             <div className="max-w-xs space-y-4 border-l border-black/10 pl-10 group cursor-default">
-               <p className="text-[10px] md:text-[11px] text-black/40 font-body font-light uppercase tracking-[0.3em] leading-loose group-hover:text-black transition-colors duration-700">
+             <div className="max-w-xs space-y-4 border-l border-black/40 pl-10 group cursor-default">
+               <p className="text-[10px] md:text-[11px] text-black/70 font-body font-light uppercase tracking-[0.3em] leading-loose group-hover:text-black transition-colors duration-700">
                  A 17-YEAR ODYSSEY ACROSS THE 22-YARD SYSTEM. <br />
                  287 REGISTERED DISMISSALS. LETHAL SWING MECHANICS. <br />
                  <span className="text-black/60 font-bold">STATUS: STERLING CORE ONLINE.</span>
@@ -132,8 +132,8 @@ const HeroSection = () => {
         className="absolute bottom-12 right-12 hidden lg:flex items-center gap-10"
       >
         <div className="flex flex-col items-end gap-1">
-           <span className="text-[8px] tracking-[0.8em] font-bold uppercase text-black/10">TECHNICAL CORE</span>
-           <span className="text-[9px] tracking-[0.4em] text-black/30 font-heading font-bold">STERLING ARCHIVE v2.0</span>
+           <span className="text-[8px] tracking-[0.8em] font-bold uppercase text-black/40">TECHNICAL CORE</span>
+           <span className="text-[9px] tracking-[0.4em] text-black/60 font-heading font-bold">STERLING ARCHIVE v2.0</span>
         </div>
         <div className="h-16 w-[1px] bg-black/5" />
       </motion.div>
